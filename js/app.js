@@ -1,15 +1,17 @@
 let numbers = [
-    154,
-    2345,
-    89,
-    6598,
-    934,
+    2,
+    6,
+    15,
+    3,
     8,
+    21,
+    32,
     9,
-    345,
 ]
 
 console.log("This is array of numbers before sorting: ", numbers)
+
+arrLength = numbers.length
 
 let findSmallest = arr => {
     smallest = arr[0]
@@ -21,15 +23,16 @@ let findSmallest = arr => {
             smallestIndex = i
         }
     }
-    return smallest
+    return smallestIndex
 }
 
 let selectionSort = arr => {
     newArr = []
 
-    for (let i = 0; i != arr.length; i++) {
+    for (let i = 0; i != arrLength; i++) {
         smallest = findSmallest(arr)
-        newArr.push(smallest)
+        newArr.push(arr[smallest])
+        arr.splice(smallest, 1)
     }
 
     return newArr

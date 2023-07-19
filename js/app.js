@@ -1,3 +1,8 @@
+let $ = document
+
+const beforeWrapper = $.querySelector('.Before')
+const afterWrapper = $.querySelector('.After')
+
 let numbers = [
     2,
     6,
@@ -9,7 +14,13 @@ let numbers = [
     9,
 ]
 
-console.log("This is array of numbers before sorting: ", numbers)
+const beforeGenerator = () => {
+    for (let number of numbers) {
+        beforeWrapper.insertAdjacentHTML("beforeend", `<li>${number}</li>`)
+    }
+}
+
+beforeGenerator()
 
 arrLength = numbers.length
 
@@ -40,4 +51,10 @@ let selectionSort = arr => {
 
 selectionSort(numbers)
 
-console.log("This is array of numbers after sorting: ", newArr)
+const afterGenerator = () => {
+    for (let number of newArr) {
+        afterWrapper.insertAdjacentHTML("beforeend", `<li>${number}</li>`)
+    }
+}
+
+afterGenerator()

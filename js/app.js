@@ -56,7 +56,6 @@ let selectionSort = arr => {
 
 const afterGenerator = newArr => {
 
-    console.log(newArr);
     afterWrapper.innerHTML = ''
     for (let number of newArr) {
         afterWrapper.insertAdjacentHTML("beforeend", `<li>${number}</li>`)

@@ -21,9 +21,9 @@ inputElem.addEventListener('keypress', event => {
 
 
 
-arrLength = numbers.length
 
 let findSmallest = arr => {
+    console.log(arr);
     let smallest = arr[0]
     let smallestIndex = 0
 
@@ -33,15 +33,15 @@ let findSmallest = arr => {
             smallestIndex = i
         }
     }
-    console.log("respons findSmallest: ", smallestIndex);
+
     return smallestIndex
 }
 
 let selectionSort = arr => {
 
-    console.log(arr);
-    let newArr = []
+    arrLength = numbers.length
 
+    let newArr = []
     let smallest
 
     for (let i = 0; i != arrLength; i++) {
@@ -49,14 +49,15 @@ let selectionSort = arr => {
         newArr.push(arr[smallest])
         arr.splice(smallest, 1)
     }
-    console.log(smallest);
 
+    afterGenerator(newArr)
     return newArr
 }
 
 const afterGenerator = newArr => {
 
     console.log(newArr);
+    afterWrapper.innerHTML = ''
     for (let number of newArr) {
         afterWrapper.insertAdjacentHTML("beforeend", `<li>${number}</li>`)
     }

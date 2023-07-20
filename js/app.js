@@ -1,32 +1,31 @@
 let $ = document
 
+const inputElem = $.querySelector('#input')
+const buttonElem = $.querySelector('#button')
 const beforeWrapper = $.querySelector('.Before')
 const afterWrapper = $.querySelector('.After')
 
-let numbers = [
-    2,
-    6,
-    15,
-    3,
-    8,
-    21,
-    32,
-    9,
-]
+let numbers = []
 
-const beforeGenerator = () => {
-    for (let number of numbers) {
-        beforeWrapper.insertAdjacentHTML("beforeend", `<li>${number}</li>`)
+inputElem.addEventListener('keypress', event => {
+
+    if (event.key === 'Enter') {
+        numbers.push(input.value)
+        input.value = ''
+        beforeWrapper.innerHTML = ''
+        for (let item of numbers) {
+            beforeWrapper.insertAdjacentHTML('beforeend', `<li>${item}</li>`)
+        }
     }
-}
+})
 
-beforeGenerator()
+
 
 arrLength = numbers.length
 
 let findSmallest = arr => {
-    smallest = arr[0]
-    smallestIndex = 0
+    let smallest = arr[0]
+    let smallestIndex = 0
 
     for (let i = 0; i != arr.length; i++) {
         if (arr[i] < smallest) {
@@ -34,27 +33,33 @@ let findSmallest = arr => {
             smallestIndex = i
         }
     }
+    console.log("respons findSmallest: ", smallestIndex);
     return smallestIndex
 }
 
 let selectionSort = arr => {
-    newArr = []
+
+    console.log(arr);
+    let newArr = []
+
+    let smallest
 
     for (let i = 0; i != arrLength; i++) {
         smallest = findSmallest(arr)
         newArr.push(arr[smallest])
         arr.splice(smallest, 1)
     }
+    console.log(smallest);
 
     return newArr
 }
 
-selectionSort(numbers)
+const afterGenerator = newArr => {
 
-const afterGenerator = () => {
+    console.log(newArr);
     for (let number of newArr) {
         afterWrapper.insertAdjacentHTML("beforeend", `<li>${number}</li>`)
     }
 }
 
-afterGenerator()
+buttonElem.addEventListener("click", () => selectionSort(numbers))

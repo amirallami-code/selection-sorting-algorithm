@@ -11,6 +11,27 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: white;
 }
+input {
+  width: 200px;
+  height: 30px;
+  padding: 4px;
+  margin: 5px;
+  border-style: none;
+  border-radius: 5px;
+}
+button {
+  width: 100px;
+  height: 30px;
+  border-style: none;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+button:hover {
+  background-color: #d1d0d0;
+}
 ul {
   display: flex;
   list-style-type: none;

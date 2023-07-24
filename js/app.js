@@ -7,10 +7,6 @@ const afterWrapper = $.querySelector('.After')
 
 let numbers = []
 
-let smallestNum = numbers[0]
-    , smallestIndex = 0
-    , findSmallestNumber = null
-
 inputElem.addEventListener('keypress', event => {
 
     if (event.key === 'Enter') {
@@ -23,26 +19,29 @@ inputElem.addEventListener('keypress', event => {
     }
 })
 
-const selectionSort = arr => {
-
-    let smallestNum = arr[0]
-    let smallestIndex = 0
-
-    for (let i = 0; i != arr.length; i++) {
-        findSmallestNumber = findSmallest(arr, smallestNum, smallestIndex)
-    }
-}
-
-const findSmallest = arr => {
+let findSmallest = arr => {
+    smallest = arr[0]
+    smallestIndex = 0
 
     for (let i = 0; i != arr.length; i++) {
-        if (arr[i] <= smallestNum) {
-            smallestNum = arr[i]
+        if (arr[i] <= smallest) {
+            smallest = arr[i]
             smallestIndex = i
-            console.log('this is smallest number', smallestNum);
-            console.log('this is smallest number index', smallestIndex);
         }
     }
+    return smallest
+}
+
+let selectionSort = arr => {
+    newArr = []
+
+    for (let i = 0; i != arr.length; i++) {
+        smallest = findSmallest(arr)
+        newArr.push(smallest)
+        smallestIndex = arr.findIndex(num => { return num === smallest })
+        arr.splice(smallestIndex, 1)
+    }
+    afterGenerator(newArr)
 }
 
 const afterGenerator = newArr => {
@@ -54,31 +53,3 @@ const afterGenerator = newArr => {
 }
 
 buttonElem.addEventListener("click", () => selectionSort(numbers))
-
-
-/*
-let findSmallest = arr => {
-    smallest = arr[0]
-    smallestIndex = 0
-
-    for (let i = 0; i != arr.length; i++) {
-        if (arr[i] < smallest) {
-            smallest = arr[i]
-            smallestIndex = i
-        }
-    }
-    return smallestIndex
-}
-
-let selectionSort = arr => {
-    newArr = []
-
-    for (let i = 0; i != arr.length; i++) {
-        smallest = findSmallest(arr)
-        newArr.push(arr[smallest])
-        arr.splice(smallest, 1)
-    }
-    afterGenerator(newArr)
-}
-
-*/

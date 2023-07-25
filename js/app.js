@@ -35,7 +35,7 @@ let findSmallest = arr => {
 let selectionSort = arr => {
     newArr = []
 
-    for (let i = 0; i != arr.length; i++) {
+    for (let i = 0; arr.length != 0; i++) {
         smallest = findSmallest(arr)
         newArr.push(smallest)
         smallestIndex = arr.findIndex(num => { return num === smallest })

@@ -3,10 +3,13 @@ let $ = document
 const inputElem = $.querySelector('#input')
 const addNumberBtn = $.querySelector('#button1')
 const startSortingBtn = $.querySelector('#button2')
+const errorElem = $.querySelector('#error')
 const beforeWrapper = $.querySelector('.Before')
 const afterWrapper = $.querySelector('.After')
 
 let numbers = []
+
+errorElem.style.opacity = '0'
 
 addNumberBtn.addEventListener('click', () => {
     pushNumberToDom()
@@ -19,11 +22,16 @@ inputElem.addEventListener('keypress', event => {
 })
 
 const pushNumberToDom = () => {
-    numbers.push(Number(input.value))
-    input.value = ''
-    beforeWrapper.innerHTML = ''
-    for (let item of numbers) {
-        beforeWrapper.insertAdjacentHTML('beforeend', `<li>${item}</li>`)
+    if (inputElem.value === '') {
+        errorElem.style.opacity = '1'
+    } else {
+        errorElem.style.opacity = '0'
+        numbers.push(Number(input.value))
+        input.value = ''
+        beforeWrapper.innerHTML = ''
+        for (let item of numbers) {
+            beforeWrapper.insertAdjacentHTML('beforeend', `<li>${item}</li>`)
+        }
     }
 }
 

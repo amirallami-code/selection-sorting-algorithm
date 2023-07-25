@@ -19,6 +19,9 @@ input {
   border-style: none;
   border-radius: 5px;
 }
+input:focus {
+  outline: none;
+}
 button {
   width: 100px;
   height: 30px;
@@ -45,6 +48,14 @@ button:hover {
 }
 #button2:hover {
   background-color: #d0d1d0;
+}
+#error {
+  margin: 5px;
+  transition: all 0.1s;
+  -webkit-transition: all 0.1s;
+  -moz-transition: all 0.1s;
+  -ms-transition: all 0.1s;
+  -o-transition: all 0.1s;
 }
 ul {
   display: flex;

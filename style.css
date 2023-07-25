@@ -8,8 +8,8 @@
 body {
   height: 100vh;
   background: linear-gradient(135deg, #d95454, #bf2e2e);
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #fff;
 }
 input {
   width: 200px;
@@ -30,9 +30,23 @@ button {
   -o-border-radius: 5px;
 }
 button:hover {
-  background-color: #d1d0d0;
+  background-color: #d0d1d0;
 }
-ul {
+#button2 {
+  width: 310px;
+  height: 30px;
+  border-style: none;
+  border-radius: 5px;
+  margin-left: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+#button2:hover {
+  background-color: #d0d1d0;
+}
+.ul2 {
   display: flex;
   list-style-type: none;
   padding: 10px;

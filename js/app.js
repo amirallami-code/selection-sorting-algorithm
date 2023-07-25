@@ -1,7 +1,8 @@
 let $ = document
 
 const inputElem = $.querySelector('#input')
-const buttonElem = $.querySelector('#button')
+const addNumberBtn = $.querySelector('#button1')
+const startSortingBtn = $.querySelector('#button2')
 const beforeWrapper = $.querySelector('.Before')
 const afterWrapper = $.querySelector('.After')
 
@@ -52,4 +53,4 @@ const afterGenerator = newArr => {
     }
 }
 
-buttonElem.addEventListener("click", () => selectionSort(numbers))
+startSortingBtn.addEventListener("click", () => selectionSort(numbers))

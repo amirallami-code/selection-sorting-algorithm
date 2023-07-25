@@ -8,17 +8,24 @@ const afterWrapper = $.querySelector('.After')
 
 let numbers = []
 
-inputElem.addEventListener('keypress', event => {
+addNumberBtn.addEventListener('click', () => {
+    pushNumberToDom()
+})
 
+inputElem.addEventListener('keypress', event => {
     if (event.key === 'Enter') {
-        numbers.push(Number(input.value))
-        input.value = ''
-        beforeWrapper.innerHTML = ''
-        for (let item of numbers) {
-            beforeWrapper.insertAdjacentHTML('beforeend', `<li>${item}</li>`)
-        }
+        pushNumberToDom()
     }
 })
+
+const pushNumberToDom = () => {
+    numbers.push(Number(input.value))
+    input.value = ''
+    beforeWrapper.innerHTML = ''
+    for (let item of numbers) {
+        beforeWrapper.insertAdjacentHTML('beforeend', `<li>${item}</li>`)
+    }
+}
 
 let findSmallest = arr => {
     smallest = arr[0]

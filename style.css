@@ -8,7 +8,7 @@
 body {
   height: 100vh;
   background: linear-gradient(135deg, #d95454, #bf2e2e);
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: #fff;
 }
 input {
@@ -46,7 +46,7 @@ button:hover {
 #button2:hover {
   background-color: #d0d1d0;
 }
-.ul2 {
+ul {
   display: flex;
   list-style-type: none;
   padding: 10px;

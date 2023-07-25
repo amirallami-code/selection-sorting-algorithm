@@ -82,3 +82,6 @@ li {
   flex-direction: column;
   align-items: center;
 }
+#reset {
+  width: 150px;
+}

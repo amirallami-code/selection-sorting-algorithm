@@ -63,6 +63,7 @@ const selectionSort = arr => {
         arr.splice(smallestIndex, 1)
     }
     afterGenerator(newArr)
+    errorElem.style.opacity = '0'
 }
 
 const afterGenerator = newArr => {

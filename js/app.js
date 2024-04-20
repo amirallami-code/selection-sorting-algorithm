@@ -14,10 +14,12 @@ errorElem.style.opacity = '0'
 resetBtn.style.opacity = '0'
 
 addNumberBtn.addEventListener('click', () => {
+    errorElem.style.opacity = '0'
     pushNumberToDom()
 })
 
 inputElem.addEventListener('keypress', event => {
+    errorElem.style.opacity = '0'
     if (event.key === 'Enter') {
         pushNumberToDom()
     }
@@ -54,16 +56,21 @@ const findSmallest = arr => {
 }
 
 const selectionSort = arr => {
-    newArr = []
+    if (numbers.length > 0) {
+        newArr = []
 
-    for (let i = 0; arr.length != 0; i++) {
-        smallest = findSmallest(arr)
-        newArr.push(smallest)
-        smallestIndex = arr.findIndex(num => { return num === smallest })
-        arr.splice(smallestIndex, 1)
+        for (let i = 0; arr.length != 0; i++) {
+            smallest = findSmallest(arr)
+            newArr.push(smallest)
+            smallestIndex = arr.findIndex(num => { return num === smallest })
+            arr.splice(smallestIndex, 1)
+        }
+        afterGenerator(newArr)
+        errorElem.style.opacity = '0'
+    } else {
+        errorElem.style.opacity = '1'
+        errorElem.innerHTML = "basket is empty, add numbers for start!"
     }
-    afterGenerator(newArr)
-    errorElem.style.opacity = '0'
 }
 
 const afterGenerator = newArr => {

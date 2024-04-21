@@ -1,6 +1,3 @@
-## Selection Sorting Algorithm
-This repository contains an implementation of selection sort, a simple and efficient sorting algorithm.
-
 ## What is an Algorithm?
 An algorithm is a set of instructions or rules that guide the computer or software in performing a particular task or solving a problem 1.
 

@@ -9,6 +9,12 @@ Selection sort is an in-place comparison-based algorithm that divides the list i
 
 Selection sort has several advantages over other sorting algorithms. It is simple to understand and implement, requires no additional memory space, and performs well on small lists . However, it is not suitable for large lists as its time complexity is O(n²) .
 
+
+## Preview
+go to this link and see the preview of this project online
+
+https://selection-sorting-algorithm.vercel.app
+
 ## Installation
 To install this project, simply clone the repository and open the index.html file in your web browser.
 ```bash

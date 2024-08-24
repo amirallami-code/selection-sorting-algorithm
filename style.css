@@ -26,6 +26,7 @@ button {
   width: 100px;
   height: 30px;
   border-style: none;
+  cursor: pointer;
   border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -73,6 +74,10 @@ li {
   justify-content: center;
   padding: 35px;
   row-gap: 10px;
+}
+.description {
+  padding: 0.5rem 0 1.5rem 0;
+  text-align: center;
 }
 .wrapper {
   padding-top: 20px;

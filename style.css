@@ -33,7 +33,7 @@ button {
   -o-border-radius: 5px;
 }
 button:hover {
-  background-color: #d0d1d0;
+  cursor: pointer;
 }
 #button2 {
   width: 310px;
@@ -46,10 +46,8 @@ button:hover {
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
 }
-#button2:hover {
-  background-color: #d0d1d0;
-}
 #error {
+  display: none;
   margin: 5px;
   transition: all 0.1s;
   -webkit-transition: all 0.1s;
@@ -71,8 +69,10 @@ li {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   justify-content: center;
   padding: 35px;
+  row-gap: 10px;
 }
 .wrapper {
   padding-top: 20px;
@@ -83,5 +83,6 @@ li {
   align-items: center;
 }
 #reset {
+  display: none;
   width: 150px;
 }

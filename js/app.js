@@ -10,9 +10,6 @@ const resetBtn = $.querySelector('#reset')
 
 let numbers = []
 
-errorElem.style.opacity = '0'
-resetBtn.style.opacity = '0'
-
 addNumberBtn.addEventListener('click', () => {
     pushNumberToDom()
 })
@@ -28,9 +25,10 @@ resetBtn.addEventListener('click', () => location.reload())
 // functions
 const pushNumberToDom = () => {
     if (inputElem.value === '') {
-        errorElem.style.opacity = '1'
+        errorElem.style.display = 'flex'
     } else {
-        errorElem.style.opacity = '0'
+        startSortingBtn.removeAttribute("disabled")
+        errorElem.style.display = 'none'
         numbers.push(Number(input.value))
         input.value = ''
         beforeWrapper.innerHTML = ''
@@ -63,7 +61,7 @@ const selectionSort = arr => {
         arr.splice(smallestIndex, 1)
     }
     afterGenerator(newArr)
-    errorElem.style.opacity = '0'
+    errorElem.style.display = 'none'
 }
 
 const afterGenerator = newArr => {
@@ -72,7 +70,7 @@ const afterGenerator = newArr => {
     for (let number of newArr) {
         afterWrapper.insertAdjacentHTML("beforeend", `<li>${number}</li>`)
     }
-    resetBtn.style.opacity = '1'
+    resetBtn.style.display = 'block'
 }
 
 startSortingBtn.addEventListener("click", () => selectionSort(numbers))

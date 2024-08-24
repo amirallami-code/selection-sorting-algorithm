@@ -69,11 +69,8 @@ const selectionSort = arr => {
         errorElem.style.opacity = '1'
         errorElem.innerHTML = "basket is empty, add numbers for start!"
     }
-<<<<<<< HEAD
     afterGenerator(newArr)
     errorElem.style.display = 'none'
-=======
->>>>>>> 0cc9f2281468d906974b94204367c2cebec1de7f
 }
 
 const afterGenerator = newArr => {

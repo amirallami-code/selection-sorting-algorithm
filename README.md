@@ -1,34 +1,93 @@
-## What is an Algorithm?
-An algorithm is a set of instructions or rules that guide the computer or software in performing a particular task or solving a problem 1.
+# Selection Sort Algorithm
 
-## What is Selection Sorting Algorithm and How Does it Help Us?
-Selection sort is an in-place comparison-based algorithm that divides the list into two parts, the sorted part on the left and the unsorted part on the right . It works by repeatedly selecting the smallest (or largest) element from the unsorted portion of the list and moving it to the sorted portion of the list .
+![Algorithm Demo](images/demo.jpg)
 
-Selection sort has several advantages over other sorting algorithms. It is simple to understand and implement, requires no additional memory space, and performs well on small lists . However, it is not suitable for large lists as its time complexity is O(n²) .
+An interactive demonstration of the Selection Sort algorithm.
 
+## Table of Contents
+- [Overview](#overview)
+- [What is Selection Sort?](#what-is-selection-sort)
+- [Features](#features)
+- [Demo](#demo)
+- [Usage](#usage)
+- [Installation](#installation)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
-## Preview
-go to this link and see the preview of this project online
+## Overview
 
-https://selection-sorting-algorithm.vercel.app
+This project provides a visual and interactive implementation of the Selection Sort algorithm, designed to help users understand how this sorting method works in practice.
 
-## Installation
-To install this project, simply clone the repository and open the index.html file in your web browser.
-```bash
-  git clone https://github.com/amirallami-code/selection-sorting-algorithm
-```
+## What is Selection Sort?
 
-## License
-This project does not have any license.
+Selection Sort is an in-place comparison-based algorithm that divides the input list into two parts:
+1. A sorted portion on the left
+2. An unsorted portion on the right
+
+The algorithm repeatedly selects the smallest (or largest) element from the unsorted portion and moves it to the end of the sorted portion.
+
+### Advantages
+- Simple to understand and implement
+- Performs well on small lists
+- Requires no additional memory space
+
+### Limitations
+- Not suitable for large datasets due to O(n²) time complexity
+
+## Features
+
+- ✅ Interactive sorting visualization
+- 🔢 Custom number input
+- 🔍 Step-by-step sorting process
+- 📊 Before and after comparison
+
+## Demo
+
+Experience the algorithm in action: [Selection Sort Demo](https://selection-sorting-algorithm.vercel.app)
 
 ## Usage
-To use this project and see how it works to sort our numbers, we should type a number in the input field that reads `Enter your number` and click on the `Add Number` button to add our number to the basket of numbers that are not sorted (`your numbers` section). When you have typed all of your numbers and added them to the basket, click on the `Start Sorting` button. The result will appear in the `After Sorting` section, where you can see that your numbers are sorted!
+
+1. Enter a number in the "Enter your number" input field.
+2. Click "Add Number" to add it to the unsorted list.
+3. Repeat steps 1-2 to add more numbers.
+4. Click "Start Sorting" to begin the sorting process.
+5. Observe the sorted result in the "After Sorting" section.
+
+## Installation 
+
+Clone the repository and open `index.html` in your web browser: 
+```bash 
+      git clone https://github.com/amirallami-code/selection-sorting-algorithm.git cd selection-sorting-algorithm
+ ```
+
+## Contributing
+
+We enthusiastically welcome contributions! To contribute:
+ 1. Fork the project.
+ 2. Create your feature branch (`git checkout -b feature/AmazingFeature`).
+ 3. Commit your changes (`git commit -m 'Add some AmazingFeature'`).
+ 4. Push to the branch (`git push origin feature/AmazingFeature`).
+ 5. Open a pull request.
+
+## License
+
+This project is currently not under any license. For more information, see the [LICENSE](LICENSE) file.
+
+
+## Contact
+
+For questions or feedback, please contact:
+
+Amirhossein Allami - [amirallami.dev@gmail.com](mailto:amirallami.dev@gmail.com)
+
+Project Link: [https://github.com/amirallami-code/selection-sorting-algorithm](https://github.com/amirallami-code/selection-sorting-algorithm)
 
 ## References
-- https://www.geeksforgeeks.org/selection-sort/
-- https://www.simplilearn.com/tutorials/data-structure-tutorial/selection-sort-algorithm
 
-## Contact Information
-If you have any questions or concerns about this project, please contact us at amirallami.dev@gmail.com
+1. [GeeksforGeeks - Selection Sort](https://www.geeksforgeeks.org/selection-sort/)
+2. [Simplilearn - Selection Sort Algorithm](https://www.simplilearn.com/tutorials/data-structure-tutorial/selection-sort-algorithm)
 
-I hope this helps! Let me know if you have any other questions.
+---
+
+⭐ Star this repository if you find it helpful!

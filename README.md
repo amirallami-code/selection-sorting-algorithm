@@ -14,6 +14,7 @@ An interactive demonstration of the Selection Sort algorithm.
 - [Contributing](#contributing)
 - [License](#license)
 - [Contact](#contact)
+- [References](#references)
 
 ## Overview
 

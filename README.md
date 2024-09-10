@@ -47,10 +47,10 @@ The algorithm repeatedly selects the smallest (or largest) element from the unso
 
 ## Features
 
-- ✅ Interactive sorting visualization
-- 🔢 Custom number input
-- 🔍 Step-by-step sorting process
-- 📊 Before and after comparison
+- Interactive sorting visualization
+- Custom number input
+- Step-by-step sorting process
+- Before and after comparison
 
 ## Demo
 

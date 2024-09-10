@@ -67,6 +67,7 @@ Experience the algorithm in action: [Selection Sort Demo](https://selection-sort
 ## Installation 
 
 Clone the repository and open `index.html` in your web browser: 
+
 ```bash 
       git clone https://github.com/amirallami-code/selection-sorting-algorithm.git cd selection-sorting-algorithm
  ```

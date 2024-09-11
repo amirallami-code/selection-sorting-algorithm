@@ -34,8 +34,13 @@ Selection Sort is an in-place comparison-based algorithm that divides the input 
 
 The algorithm repeatedly selects the smallest (or largest) element from the unsorted portion and moves it to the end of the sorted portion.
 
-![Selection Sorting Algorithm](assets/algorithm-animation.gif)
-[GIF Reference](https://youtu.be/kPRA0W1kECg?si=VhbgKEH0BB6uqjTQ)
+<p align="center">
+  <img width="750" height="auto" src="assets/algorithm-animation.gif">
+</p>
+
+<div align="center">
+      <a href="https://youtu.be/kPRA0W1kECg?si=VhbgKEH0BB6uqjTQ">GIF Reference</a>
+</div>
 
 ### Advantages
 - Simple to understand and implement
